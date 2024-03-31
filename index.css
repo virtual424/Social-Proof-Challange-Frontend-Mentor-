@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 15px;
+}
+
+:root {
+  --VeryDarkMagenta: hsl(300, 43%, 22%);
+  --SoftPink: hsl(333, 80%, 67%);
+  --DarkGrayishMagenta: hsl(303, 10%, 53%);
+  --LightGrayishMagenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  background-image: url("./images/bg-pattern-top-mobile.svg");
+  background-repeat: no-repeat;
+  padding: 1.5em;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5em;
+}
+
+.heroDescription {
+  padding-top: 3.5em;
+}
+
+.heroDescription > h1 {
+  font-size: 2.5rem;
+  color: var(--VeryDarkMagenta);
+}
+
+.heroDescription > p {
+  color: var(--DarkGrayishMagenta);
+  font-size: 1.2rem;
+  line-height: 1.4em;
+}
+
+.ratings {
+  width: 100%;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  padding: 1.2em 2em;
+  max-width: 450px;
+  background-color: var(--LightGrayishMagenta);
+}
+
+.ratings h3 {
+  color: var(--VeryDarkMagenta);
+}
+
+.stars {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.testimonials {
+  margin: 3.5em 0;
+}
+
+.testimonial {
+  background-color: var(--VeryDarkMagenta);
+  border-radius: 0.5em;
+  padding: 1.6em;
+  color: var(--White);
+}
+
+.userProfile {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  width: 100%;
+  margin-bottom: 2em;
+  text-align: start;
+}
+
+.img {
+  border-radius: 50%;
+  width: 13%;
+}
+
+.userDescription {
+  font-weight: 600;
+}
+
+.userName {
+  margin-bottom: 0.3em;
+}
+
+.designation {
+  color: var(--SoftPink);
+  opacity: 0.6;
+}
+
+.comment {
+  font-size: 1.2rem;
+  line-height: 1.2em;
+  text-align: start;
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    background-image: url("./images/bg-pattern-top-desktop.svg");
+  }
+
+  .hero {
+    margin: 3.5em auto;
+    flex-direction: row;
+    max-width: 1200px;
+  }
+
+  .heroDescription {
+    text-align: start;
+    max-width: 450px;
+  }
+
+  .heroDescription > h1 {
+    font-size: 4rem;
+  }
+
+  .rating {
+    flex-direction: row;
+  }
+
+  .rating:nth-child(2) {
+    margin-left: 7em;
+  }
+
+  .rating:nth-child(3) {
+    margin-left: 14em;
+  }
+
+  .stars {
+    margin-right: 1.5em;
+  }
+
+  .testimonials {
+    margin: 0 auto;
+    max-width: 1200px;
+    flex-direction: row;
+  }
+
+  .testimonials > .testimonial:nth-child(2) {
+    margin-top: 2em;
+  }
+
+  .testimonials > .testimonial:nth-child(3) {
+    margin-top: 4em;
+  }
+}
